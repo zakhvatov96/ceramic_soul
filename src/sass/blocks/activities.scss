@@ -12,7 +12,7 @@
 		box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
 	}
 	&__text {
-		margin-top: 20px;
+		margin-block-start: 20px;
 		font-weight: 400;
 		font-size: 16px;
 		color: $dark;
@@ -30,7 +30,7 @@
 			margin-top: 40px;
 		}
 		&__text {
-			margin-top: 25px;
+			margin-block-start: 25px;
 			font-size: 20px;
 		}
 	}
@@ -55,7 +55,7 @@
 		}
 		&__text {
 			&_fixed {
-				width: 556px;
+				inline-size: 556px;
 			}
 		}
 	}
