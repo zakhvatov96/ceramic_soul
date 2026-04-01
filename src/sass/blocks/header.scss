@@ -1,88 +1,136 @@
 @use '/src/sass/base/variables.scss' as *;
 
 .header {
-	&__top {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__logo {
-		width: 100px;
-		height: 100px;
-	}
-	&__icons {
-		display: flex;
-		align-items: flex-start;
-		gap: 15px;
-		a {
-			display: block;
-			color: $dark;
-			span {
-				display: block;
-				width: 20px;
-				height: 20px;				
-			}
-		}
-
-	}
-	&__nav {
-		display: none;
-	}
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+  &__icons {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    a {
+      display: block;
+      color: $dark;
+      span {
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__nav {
+    display: none;
+  }
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    padding: 50px 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: $light;
+    transition: all 0.4s;
+    &_active {
+      transform: translateX(100%);
+    }
+    &-close {
+      width: 20px;
+      height: 20px;
+      span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: $dark;
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translateY(8px) rotate(-45deg);
+        }
+      }
+    }
+    &-nav {
+      margin-top: 50px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0;
+        list-style-type: none;
+        padding-left: 14px;
+      }
+    }
+    &-link {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $dark;
+      text-decoration: none;
+    }
+  }
 }
 
 .burger {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	height: 23px;
-	margin-right: 28px;
-	span {
-		display: block;		
-		border: 1px solid $dark;
-		width: 20px;
-		height: 0px;
-	}
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 23px;
+  margin-right: 28px;
+  span {
+    display: block;
+    border: 1px solid $dark;
+    width: 20px;
+    height: 0px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-	.header {
-		&__nav {
-			display: block;
-			margin-top: 20px;
-			ul {
-				padding: 0;
-				display: flex;
-				justify-content: center;
-				gap: 30px;
-				li {
-					list-style-type: none;
-				}
-			}
-		}
-		&__link {
-			font-weight: 400;
-			font-size: 20px;
-			text-transform: uppercase;
-			color: $dark;
-			text-decoration: none;
-		}
-	}
-	.burger {
-		visibility: hidden;
-	}	
+  .header {
+    &__nav {
+      display: block;
+      margin-top: 20px;
+      ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+    &__link {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $dark;
+      text-decoration: none;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+  .burger {
+    visibility: hidden;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	.header {
-		&__logo {
-			width: 150px;
-			height: 151px;
-		}
-		&__nav {
-			margin-top: 36px;
-			ul {
-				gap: 60px;
-			}
-		}
-	}
-
+  .header {
+    &__logo {
+      width: 150px;
+      height: 151px;
+    }
+    &__nav {
+      margin-top: 36px;
+      ul {
+        gap: 60px;
+      }
+    }
+  }
 }
