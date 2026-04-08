@@ -1,0 +1,70 @@
+@use '../base/variables.scss' as *;
+
+.about {
+  padding-top: 50px;
+  &__title {
+    margin-top: 60px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 35px;
+  }
+  &__img {
+    object-fit: cover;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    &__wrapper {
+      padding: 0 60px 0 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    &__wrapper {
+      padding: 0;
+      width: 550px;
+    }
+
+    &__content {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &__text {
+      width: 570px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 40px;
+    &__title {
+      margin-top: 100px;
+    }
+    &__content {
+      margin-top: 100px;
+    }
+
+    &__wrapper {
+      width: 700px;
+    }
+
+    &__text {
+      width: 720px;
+      font-size: 20px;
+    }
+  }
+}

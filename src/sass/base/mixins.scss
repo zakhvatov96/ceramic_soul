@@ -39,3 +39,30 @@
     height: 200px;
   }
 }
+
+@mixin btn-hover {
+  &:hover {
+    border: 1px solid $ceramic;
+    color: $ceramic;
+  }
+}
+
+@mixin btn-active {
+  &:active {
+    outline: 1px solid $ceramic;
+    border: 1px solid $ceramic;
+  }
+}
+
+@mixin btn-focus {
+  &:focus {
+    outline: 1px solid $ceramic;
+    border: 1px solid $ceramic;
+  }
+}
+@mixin btn-disabled {
+  &:disabled {
+    border: 1px solid $ui-disabled;
+    color: $ui-disabled;
+  }
+}

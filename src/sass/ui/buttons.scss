@@ -15,14 +15,8 @@
   height: 40px;
   font-size: 16px;
   transition: 0.5s all;
-  &:focus {
-    outline: 1px solid $ceramic;
-    border: 1px solid $ceramic;
-  }
-  &:disabled {
-    border: 1px solid $ui-disabled;
-    color: $ui-disabled;
-  }
+  @include btn-focus;
+  @include btn-disabled;
 }
 
 .btn-submit {
@@ -32,10 +26,7 @@
   font-size: 16px;
   border: 1px solid $light;
   color: $light;
-  &:disabled {
-    border: 1px solid $ui-disabled;
-    color: $ui-disabled;
-  }
+  @include btn-disabled;
 }
 
 .btn-read {
@@ -44,10 +35,7 @@
   height: 32px;
   font-size: 14px;
   transition: 0.5s all;
-  &:focus {
-    outline: 1px solid $ceramic;
-    border: 1px solid $ceramic;
-  }
+  @include btn-focus;
 }
 
 @media screen and (min-width: 1200px) {
@@ -64,24 +52,12 @@
     }
   }
   .btn-send {
-    &:active {
-      outline: 1px solid $ceramic;
-      border: 1px solid $ceramic;
-    }
-    &:hover {
-      border: 1px solid $ceramic;
-      color: $ceramic;
-    }
+    @include btn-active;
+    @include btn-hover;
   }
   .btn-read {
-    &:active {
-      outline: 1px solid $ceramic;
-      border: 1px solid $ceramic;
-    }
-    &:hover {
-      border: 1px solid $ceramic;
-      color: $ceramic;
-    }
+    @include btn-active;
+    @include btn-hover;
   }
 }
 
