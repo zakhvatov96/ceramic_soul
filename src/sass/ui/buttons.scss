@@ -38,6 +38,18 @@
   }
 }
 
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  font-size: 14px;
+  transition: 0.5s all;
+  &:focus {
+    outline: 1px solid $ceramic;
+    border: 1px solid $ceramic;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .btn-default {
     &:hover {
@@ -61,6 +73,16 @@
       color: $ceramic;
     }
   }
+  .btn-read {
+    &:active {
+      outline: 1px solid $ceramic;
+      border: 1px solid $ceramic;
+    }
+    &:hover {
+      border: 1px solid $ceramic;
+      color: $ceramic;
+    }
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -69,5 +91,3 @@
     height: 60px;
   }
 }
-
-
