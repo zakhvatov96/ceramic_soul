@@ -155,6 +155,7 @@
                 id="question"
                 placeholder="Question"
               ></textarea>
+              <div class="error-message"></div>
               <label class="git__label git__check-block" for="checkbox">
                 <input
                   required
@@ -164,6 +165,7 @@
                 />
                 I agree with the <a href="#">terms</a></label
               >
+              <div class="checkbox-error-message"></div>
               <button class="btn-send git__btn">send request</button>
             </form>
             <img src="/src/img/form/vase.png" alt="vase" class="git__vase" />
@@ -214,18 +216,21 @@
               required
               type="email"
               name="email"
+              id="footer-email"
               placeholder="Enter your e-mail"
               class="footer__input"
             />
+            <div class="footer-error-message"></div>
             <label class="footer__label" for="checkbox">
               <input
                 required
                 class="footer__checkbox"
                 type="checkbox"
-                id="checkbox"
+                id="footer-checkbox"
               />
               I agree with the <a href="#">terms</a></label
             >
+            <div class="footer-checkbox-error-message"></div>
             <button class="btn-submit footer__btn">submit</button>
           </form>
           <nav class="footer__nav">
